@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PrzeliczMi.pl</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" type="image/png" href="./saint-pierre-and-miquelon.png">
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<!-- Restore the original header section with ads on both sides -->
+			<div class="row header-section mb-4">
+				<div class="col-lg-3 col-md-12 mb-3 mb-lg-0">
+					<!-- Left header ad -->
+					<div class="ad-container header-ad" id="leftHeaderAd">
+						<!-- <div>
+							<i class="fas fa-ad fa-3x mb-2"></i>
+							<p>Miejsce na Twoją reklamę</p>
+						</div> -->
+
+						<div class="ad-with-link">
+							<a href="https://amzn.to/4bsyzYU" target="_blank" id="adLink">
+								<img
+									src="./rouclo.svg"
+									alt="Reklama"
+									id="adImage"
+									class="img-fluid"
+								/>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div
+					class="col-lg-6 col-md-12 mb-3 mb-lg-0 d-flex align-items-center justify-content-center"
+				>
+					<div>
+						<h1 class="main-title">
+							<i class="fas fa-drafting-compass me-2"></i>PrzeliczMi.pl
+						</h1>
+						<p class="site-subtitle">
+							Prosty i szybki przelicznik jednostek online
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-12">
+					<!-- Right header ad -->
+					<div class="ad-container header-ad" id="rightHeaderAd">
+						<div>
+							<i class="fas fa-ad fa-3x mb-2"></i>
+							<p>Miejsce na Twoją reklamę</p>
+						</div>
+
+						<!-- Kod do dodania obrazu i linku do strony (usuń znaki komentarza aby włączyć): -->
+						<!-- <div class="ad-with-link d-flex justify-content-center align-items-center h-100">
+								<a href="http://www.amazon.pl/wyprobujprime?tag=lukq1984-21" class="d-block w-100">
+									<img src="./Amazon afilmacja.svg" alt="Reklama" id="adImage" class="img-fluid mx-auto d-block" style="max-width: 100%; height: auto;">
+								</a>
+							</div> -->
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<!-- Left Sidebar with Categories Menu - Increase width from col-lg-2 to col-lg-3 -->
+				<div class="col-lg-3 d-none d-lg-block">
+					<div class="sidebar">
+						<div class="categories-menu">
+							<h3 class="menu-title"><span>Kategorie</span></h3>
+							<ul class="nav flex-column">
+								<li class="nav-item">
+									<a
+										class="nav-link active"
+										href="#length"
+										data-category="length"
+									>
+										<i class="fas fa-ruler"></i>Długość
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#mass" data-category="mass">
+										<i class="fas fa-weight-hanging"></i>Masa
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#temp" data-category="temp">
+										<i class="fas fa-temperature-high"></i>Temperatura
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#volume" data-category="volume">
+										<i class="fas fa-flask"></i>Objętość
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#area" data-category="area">
+										<i class="fas fa-vector-square"></i>Powierzchnia
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#time" data-category="time">
+										<i class="fas fa-clock"></i>Czas
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#speed" data-category="speed">
+										<i class="fas fa-tachometer-alt"></i>Prędkość
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#energy" data-category="energy">
+										<i class="fas fa-bolt"></i>Energia
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#pressure" data-category="pressure">
+										<i class="fas fa-compress-alt"></i>Ciśnienie
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#power" data-category="power">
+										<i class="fas fa-bolt"></i>Moc
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#data" data-category="data">
+										<i class="fas fa-memory"></i>Pamięć
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#freq" data-category="freq">
+										<i class="fas fa-wave-square"></i>Częstotliwość
+									</a>
+								</li>
+								<!-- New categories -->
+								<li class="nav-item">
+									<a class="nav-link" href="#sound" data-category="sound">
+										<i class="fas fa-volume-up"></i>Dźwięk
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#density" data-category="density">
+										<i class="fas fa-tint"></i>Gęstość
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#light" data-category="light">
+										<i class="far fa-lightbulb"></i>Ilość światła
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#magnetic" data-category="magnetic">
+										<i class="fas fa-magnet"></i>Indukcja magnetyczna
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="#inductance"
+										data-category="inductance"
+									>
+										<i class="fas fa-ring"></i>Indukcyjność
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#angle" data-category="angle">
+										<i class="fas fa-ruler-combined"></i>Kąty
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="#viscosity"
+										data-category="viscosity"
+									>
+										<i class="fas fa-water"></i>Lepkość kinematyczna
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="#luminance"
+										data-category="luminance"
+									>
+										<i class="far fa-sun"></i>Luminancja
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="#molarmass"
+										data-category="molarmass"
+									>
+										<i class="fas fa-atom"></i>Masa molowa
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#torque" data-category="torque">
+										<i class="fas fa-wrench"></i>Moment obrotowy
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#voltage" data-category="voltage">
+										<i class="fas fa-bolt"></i>Napięcie elektryczne
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="#illuminance"
+										data-category="illuminance"
+									>
+										<i class="fas fa-lightbulb"></i>Natężenie oświetlenia
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="#acceleration"
+										data-category="acceleration"
+									>
+										<i class="fas fa-tachometer-alt"></i>Przyśpieszenie
+									</a>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link"
+										href="#resistance"
+										data-category="resistance"
+									>
+										<i class="fas fa-microchip"></i>Rezystancja
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#fuel" data-category="fuel">
+										<i class="fas fa-gas-pump"></i>Zużycie paliwa
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#charge" data-category="charge">
+										<i class="fas fa-battery-full"></i>Ładunek elektryczny
+									</a>
+								</li>
+							</ul>
+							<button id="resetAll" class="reset-button mt-2">
+								<i class="fas fa-redo me-2"></i>Resetuj
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Main Content - Adjust width from col-lg-8 to col-lg-6 -->
+				<div class="col-lg-6">
+					<div class="row">
+						<!-- Długość -->
+						<div class="col-md-12" id="length">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-ruler me-2"></i>Długość</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="lengthValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="lengthValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="lengthUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="lengthUnit">
+													<option value="mm">[mm] Milimetr</option>
+													<option value="cm">[cm] Centymetr</option>
+													<option value="dm">[dm] Decymetr</option>
+													<option value="m" selected>[m] Metr</option>
+													<option value="km">[km] Kilometr</option>
+													<option value="in">[in] Cal</option>
+													<option value="ft">[ft] Stopa</option>
+													<option value="yd">[yd] Jard</option>
+													<option value="mi">[mi] Mila</option>
+													<option value="nm">[nm] Mila morska</option>
+													<option value="um">[μm] Mikrometr</option>
+													<option value="A">[Å] Angstrem</option>
+													<option value="ly">[ly] Rok świetlny</option>
+													<option value="pc">[pc] Parsek</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="length"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="lengthResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Masa -->
+						<div class="col-md-12" id="mass">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-weight-hanging me-2"></i>Masa</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="massValue" class="form-label">Wartość</label>
+											<input
+												type="number"
+												class="form-control"
+												id="massValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="massUnit" class="form-label">Jednostka</label>
+											<div class="input-group">
+												<select class="form-select" id="massUnit">
+													<option value="mg">[mg] Miligram</option>
+													<option value="g">[g] Gram</option>
+													<option value="dag">[dag] Dekagram</option>
+													<option value="kg" selected>[kg] Kilogram</option>
+													<option value="t">[t] Tona</option>
+													<option value="oz">[oz] Uncja</option>
+													<option value="lb">[lb] Funt</option>
+													<option value="st">[st] Kamień</option>
+													<option value="lt">[lt] Tona długa</option>
+													<option value="st">[st] Tona krótka</option>
+													<option value="ct">[ct] Karat</option>
+													<option value="gr">[gr] Gran</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="mass"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="massResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Temperatura -->
+						<div class="col-md-12" id="temp">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2>
+										<i class="fas fa-temperature-high me-2"></i>Temperatura
+									</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="tempValue" class="form-label">Wartość</label>
+											<input
+												type="number"
+												class="form-control"
+												id="tempValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="tempUnit" class="form-label">Jednostka</label>
+											<div class="input-group">
+												<select class="form-select" id="tempUnit">
+													<option value="c" selected>[°C] Celsjusz</option>
+													<option value="f">[°F] Fahrenheit</option>
+													<option value="k">[K] Kelwin</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="temp"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="tempResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Objętość -->
+						<div class="col-md-12" id="volume">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-flask me-2"></i>Objętość</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="volumeValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="volumeValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="volumeUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="volumeUnit">
+													<option value="ml">[ml] Mililitr</option>
+													<option value="cl">[cl] Centilitr</option>
+													<option value="dl">[dl] Decylitr</option>
+													<option value="l" selected>[l] Litr</option>
+													<option value="m3">[m³] Metr³</option>
+													<option value="gal">[gal] Galon</option>
+													<option value="pt">[pt] Pinta</option>
+													<option value="qt">[qt] Kwarta</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="volume"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="volumeResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Powierzchnia -->
+						<div class="col-md-12" id="area">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-vector-square me-2"></i>Powierzchnia</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="areaValue" class="form-label">Wartość</label>
+											<input
+												type="number"
+												class="form-control"
+												id="areaValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="areaUnit" class="form-label">Jednostka</label>
+											<div class="input-group">
+												<select class="form-select" id="areaUnit">
+													<option value="mm2">[mm²] Milimetr²</option>
+													<option value="cm2">[cm²] Centymetr²</option>
+													<option value="m2" selected>[m²] Metr²</option>
+													<option value="a">[a] Ar</option>
+													<option value="ha">[ha] Hektar</option>
+													<option value="km2">[km²] Kilometr²</option>
+													<option value="in2">[in²] Cal²</option>
+													<option value="ft2">[ft²] Stopa²</option>
+													<option value="ac">[ac] Akr</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="area"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="areaResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Czas -->
+						<div class="col-md-12" id="time">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-clock me-2"></i>Czas</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="timeValue" class="form-label">Wartość</label>
+											<input
+												type="number"
+												class="form-control"
+												id="timeValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="timeUnit" class="form-label">Jednostka</label>
+											<div class="input-group">
+												<select class="form-select" id="timeUnit">
+													<option value="ms">[ms] Milisekunda</option>
+													<option value="s">[s] Sekunda</option>
+													<option value="min" selected>[min] Minuta</option>
+													<option value="h">[h] Godzina</option>
+													<option value="d">[d] Dzień</option>
+													<option value="wk">[tyg] Tydzień</option>
+													<option value="mo">[m-c] Miesiąc</option>
+													<option value="yr">[r] Rok</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="time"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="timeResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Prędkość -->
+						<div class="col-md-12" id="speed">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-tachometer-alt me-2"></i>Prędkość</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="speedValue" class="form-label">Wartość</label>
+											<input
+												type="number"
+												class="form-control"
+												id="speedValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="speedUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="speedUnit">
+													<option value="mps">[m/s] Metr na sekundę</option>
+													<option value="kph" selected>
+														[km/h] Kilometr na godzinę
+													</option>
+													<option value="mph">[mph] Mila na godzinę</option>
+													<option value="fps">[ft/s] Stopa na sekundę</option>
+													<option value="knot">[kn] Węzeł</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="speed"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="speedResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Energia -->
+						<div class="col-md-12" id="energy">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-bolt me-2"></i>Energia</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="energyValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="energyValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="energyUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="energyUnit">
+													<option value="j" selected>[J] Dżul</option>
+													<option value="cal">[cal] Kaloria</option>
+													<option value="kcal">[kcal] Kilokaloria</option>
+													<option value="kwh">[kWh] Kilowatogodzina</option>
+													<option value="ev">[eV] Elektronowolt</option>
+													<option value="btu">[BTU] BTU</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="energy"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="energyResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Ciśnienie (Pressure) -->
+						<div class="col-md-12" id="pressure">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-compress-alt me-2"></i>Ciśnienie</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="pressureValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="pressureValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="pressureUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="pressureUnit">
+													<option value="pa" selected>[Pa] Pascal</option>
+													<option value="hpa">[hPa] Hektopaskal</option>
+													<option value="kpa">[kPa] Kilopaskal</option>
+													<option value="mpa">[MPa] Megapaskal</option>
+													<option value="bar">[bar] Bar</option>
+													<option value="atm">[atm] Atmosfera</option>
+													<option value="psi">[psi] Funt na cal²</option>
+													<option value="mmhg">
+														[mmHg] Milimetr słupa rtęci
+													</option>
+													<option value="inhg">[inHg] Cal słupa rtęci</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="pressure"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="pressureResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Moc (Power) -->
+						<div class="col-md-12" id="power">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-bolt me-2"></i>Moc</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="powerValue" class="form-label">Wartość</label>
+											<input
+												type="number"
+												class="form-control"
+												id="powerValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="powerUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="powerUnit">
+													<option value="w" selected>[W] Wat</option>
+													<option value="kw">[kW] Kilowat</option>
+													<option value="mw">[MW] Megawat</option>
+													<option value="hp">[hp] Koń mechaniczny</option>
+													<option value="ps">[PS] Koń mechaniczny</option>
+													<option value="btu">[BTU] BTU na godzinę</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="power"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="powerResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Pamięć (Digital Storage) -->
+						<div class="col-md-12" id="data">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-memory me-2"></i>Pamięć</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="dataValue" class="form-label">Wartość</label>
+											<input
+												type="number"
+												class="form-control"
+												id="dataValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="dataUnit" class="form-label">Jednostka</label>
+											<div class="input-group">
+												<select class="form-select" id="dataUnit">
+													<option value="b">[b] Bit</option>
+													<option value="B">[B] Bajt</option>
+													<option value="KB" selected>[KB] Kilobajt</option>
+													<option value="MB">[MB] Megabajt</option>
+													<option value="GB">[GB] Gigabajt</option>
+													<option value="TB">[TB] Terabajt</option>
+													<option value="PB">[PB] Petabajt</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="data"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="dataResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Częstotliwość (Frequency) -->
+						<div class="col-md-12" id="freq">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-wave-square me-2"></i>Częstotliwość</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="freqValue" class="form-label">Wartość</label>
+											<input
+												type="number"
+												class="form-control"
+												id="freqValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="freqUnit" class="form-label">Jednostka</label>
+											<div class="input-group">
+												<select class="form-select" id="freqUnit">
+													<option value="hz" selected>[Hz] Herc</option>
+													<option value="khz">[kHz] Kiloherc</option>
+													<option value="mhz">[MHz] Megaherc</option>
+													<option value="ghz">[GHz] Gigaherc</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="freq"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="freqResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Dźwięk (Sound) -->
+						<div class="col-md-12" id="sound">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-volume-up me-2"></i>Dźwięk</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="soundValue" class="form-label">Wartość</label>
+											<input
+												type="number"
+												class="form-control"
+												id="soundValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="soundUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="soundUnit">
+													<option value="db" selected>[dB] Decybel</option>
+													<option value="np">[Np] Neper</option>
+													<option value="phon">[phon] Fon</option>
+													<option value="sone">[sone] Son</option>
+													<option value="spl">
+														[SPL] Poziom ciśnienia dźwięku
+													</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="sound"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="soundResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Gęstość (Density) -->
+						<div class="col-md-12" id="density">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-tint me-2"></i>Gęstość</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="densityValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="densityValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="densityUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="densityUnit">
+													<option value="kgm3" selected>
+														[kg/m³] Kilogram/metr³
+													</option>
+													<option value="gcm3">[g/cm³] Gram/centymetr³</option>
+													<option value="lbft3">[lb/ft³] Funt/stopa³</option>
+													<option value="lbgal">[lb/gal] Funt/galon</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="density"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="densityResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Ilość światła (Light quantity) -->
+						<div class="col-md-12" id="light">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="far fa-lightbulb me-2"></i>Ilość światła</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="lightValue" class="form-label">Wartość</label>
+											<input
+												type="number"
+												class="form-control"
+												id="lightValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="lightUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="lightUnit">
+													<option value="lm" selected>[lm] Lumen</option>
+													<option value="cd">[cd] Kandela</option>
+													<option value="lx">[lx] Luks</option>
+													<option value="talbot">[talbot] Talbot</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="light"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="lightResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Indukcja magnetyczna (Magnetic induction) -->
+						<div class="col-md-12" id="magnetic">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2>
+										<i class="fas fa-magnet me-2"></i>Indukcja magnetyczna
+									</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="magneticValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="magneticValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="magneticUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="magneticUnit">
+													<option value="t" selected>[T] Tesla</option>
+													<option value="g">[G] Gauss</option>
+													<option value="mt">[mT] Militesla</option>
+													<option value="ut">[μT] Mikrotesla</option>
+													<option value="wb">[Wb/m²] Weber/metr²</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="magnetic"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="magneticResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Indukcyjność (Inductance) -->
+						<div class="col-md-12" id="inductance">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-ring me-2"></i>Indukcyjność</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="inductanceValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="inductanceValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="inductanceUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="inductanceUnit">
+													<option value="h" selected>[H] Henry</option>
+													<option value="mh">[mH] Milihenry</option>
+													<option value="uh">[μH] Mikrohenry</option>
+													<option value="nh">[nH] Nanohenry</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="inductance"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="inductanceResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Kąty (Angles) -->
+						<div class="col-md-12" id="angle">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-ruler-combined me-2"></i>Kąty</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="angleValue" class="form-label">Wartość</label>
+											<input
+												type="number"
+												class="form-control"
+												id="angleValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="angleUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="angleUnit">
+													<option value="deg" selected>[°] Stopień</option>
+													<option value="rad">[rad] Radian</option>
+													<option value="gon">[gon] Gradus</option>
+													<option value="arcmin">[′] Minuta kątowa</option>
+													<option value="arcsec">[″] Sekunda kątowa</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="angle"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="angleResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Lepkość kinematyczna (Kinematic viscosity) -->
+						<div class="col-md-12" id="viscosity">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-water me-2"></i>Lepkość kinematyczna</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="viscosityValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="viscosityValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="viscosityUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="viscosityUnit">
+													<option value="m2s" selected>
+														[m²/s] Metr²/sekundę
+													</option>
+													<option value="stoke">[St] Stokes</option>
+													<option value="cstoke">[cSt] Centystokes</option>
+													<option value="ft2s">[ft²/s] Stopa²/sekundę</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="viscosity"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="viscosityResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Luminancja (Luminance) -->
+						<div class="col-md-12" id="luminance">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="far fa-sun me-2"></i>Luminancja</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="luminanceValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="luminanceValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="luminanceUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="luminanceUnit">
+													<option value="cdm2" selected>
+														[cd/m²] Kandela/metr²
+													</option>
+													<option value="nit">[nit] Nit</option>
+													<option value="stilb">[sb] Stilb</option>
+													<option value="apostilb">[asb] Apostilb</option>
+													<option value="fl">[fL] Footlambert</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="luminance"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="luminanceResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Masa molowa (Molar mass) -->
+						<div class="col-md-12" id="molarmass">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-atom me-2"></i>Masa molowa</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="molarmassValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="molarmassValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="molarmassUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="molarmassUnit">
+													<option value="kgmol" selected>
+														[kg/mol] Kilogram/mol
+													</option>
+													<option value="gmol">[g/mol] Gram/mol</option>
+													<option value="lbmol">[lb/mol] Funt/mol</option>
+													<option value="uma">
+														[u] Jednostka masy atomowej
+													</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="molarmass"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="molarmassResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Moment obrotowy (Torque) -->
+						<div class="col-md-12" id="torque">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-wrench me-2"></i>Moment obrotowy</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="torqueValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="torqueValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="torqueUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="torqueUnit">
+													<option value="nm" selected>[N·m] Niutonometr</option>
+													<option value="kgm">[kg·m] Kilogramometr</option>
+													<option value="ftlb">[ft·lb] Stopofunt</option>
+													<option value="inlb">[in·lb] Calfunt</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="torque"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="torqueResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Napięcie elektryczne (Voltage) -->
+						<div class="col-md-12" id="voltage">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-bolt me-2"></i>Napięcie elektryczne</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="voltageValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="voltageValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="voltageUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="voltageUnit">
+													<option value="v" selected>[V] Wolt</option>
+													<option value="mv">[mV] Miliwolt</option>
+													<option value="kv">[kV] Kilowolt</option>
+													<option value="Mv">[MV] Megawolt</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="voltage"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="voltageResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Natężenie oświetlenia (Illuminance) -->
+						<div class="col-md-12" id="illuminance">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2>
+										<i class="fas fa-lightbulb me-2"></i>Natężenie oświetlenia
+									</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="illuminanceValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="illuminanceValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="illuminanceUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="illuminanceUnit">
+													<option value="lux" selected>[lx] Luks</option>
+													<option value="fc">[fc] Foot-candle</option>
+													<option value="phot">[ph] Foot</option>
+													<option value="nox">[nx] Noks</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="illuminance"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="illuminanceResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Przyśpieszenie (Acceleration) -->
+						<div class="col-md-12" id="acceleration">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2>
+										<i class="fas fa-tachometer-alt me-2"></i>Przyśpieszenie
+									</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="accelerationValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="accelerationValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="accelerationUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="accelerationUnit">
+													<option value="mss" selected>
+														[m/s²] Metr/sekundę²
+													</option>
+													<option value="g">[g] G</option>
+													<option value="ftss">[ft/s²] Stopa/sekundę²</option>
+													<option value="gal">[Gal] Gal</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="acceleration"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="accelerationResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Rezystancja (Resistance) -->
+						<div class="col-md-12" id="resistance">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-microchip me-2"></i>Rezystancja</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="resistanceValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="resistanceValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="resistanceUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="resistanceUnit">
+													<option value="ohm" selected>[Ω] Om</option>
+													<option value="kohm">[kΩ] Kiloohm</option>
+													<option value="mohm">[MΩ] Megaohm</option>
+													<option value="uohm">[μΩ] Mikroohm</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="resistance"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="resistanceResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Zużycie paliwa (Fuel consumption) -->
+						<div class="col-md-12" id="fuel">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2><i class="fas fa-gas-pump me-2"></i>Zużycie paliwa</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="fuelValue" class="form-label">Wartość</label>
+											<input
+												type="number"
+												class="form-control"
+												id="fuelValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="fuelUnit" class="form-label">Jednostka</label>
+											<div class="input-group">
+												<select class="form-select" id="fuelUnit">
+													<option value="lkm" selected>
+														[l/100km] Litr/100km
+													</option>
+													<option value="mpg">[mpg] Mila na galon</option>
+													<option value="kmpl">[km/l] Kilometr na litr</option>
+													<option value="mpl">[mpl] Mila na litr</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="fuel"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="fuelResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Ładunek elektryczny (Electric charge) -->
+						<div class="col-md-12" id="charge">
+							<div class="converter-card">
+								<div class="converter-header">
+									<h2>
+										<i class="fas fa-battery-full me-2"></i>Ładunek elektryczny
+									</h2>
+								</div>
+								<div class="converter-body">
+									<div class="row">
+										<div class="col-md-6">
+											<label for="chargeValue" class="form-label"
+												>Wartość</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="chargeValue"
+											/>
+										</div>
+										<div class="col-md-6">
+											<label for="chargeUnit" class="form-label"
+												>Jednostka</label
+											>
+											<div class="input-group">
+												<select class="form-select" id="chargeUnit">
+													<option value="c" selected>[C] Kulomb</option>
+													<option value="mc">[mC] Milikulomb</option>
+													<option value="uc">[μC] Mikrokulomb</option>
+													<option value="nc">[nC] Nanokulomb</option>
+													<option value="pc">[pC] Pikokulomb</option>
+												</select>
+												<button
+													class="btn btn-outline-secondary reset-unit-btn"
+													type="button"
+													data-unit="charge"
+												>
+													<i class="fas fa-redo"></i>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="results mt-3" id="chargeResults">
+										<p>Wybierz wartość aby zobaczyć przeliczenia</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer">
+						<p>
+							<strong
+								>© 2025 PrzeliczMi | Wszystkie prawa zastrzeżone | Łukasz
+								Antkowiak</strong
+							>
+						</p>
+						<div class="contact-info">
+							<p>
+								Kontakt:
+								<a href="mailto:przeliczmi@gmail.com">Napisz do mnie</a>
+							</p>
+						</div>
+						<div class="disclaimer">
+							<p>
+								Dane prezentowane na stronie są orientacyjne. Profesjonalna
+								weryfikacja wyników jest niezbędna. <br />
+								Użytkownik ponosi pełną odpowiedzialność za ich zastosowanie.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right Sidebar with History and Ad - Increase width from col-lg-2 to col-lg-3 -->
+				<div class="col-lg-3 d-none d-lg-block">
+					<div class="right-sidebar">
+						<!-- History Component -->
+						<div class="history-container">
+							<h3 class="history-title"><span>Historia</span></h3>
+							<ul id="historyList" class="history-list">
+								<li class="no-history">Brak historii konwersji</li>
+							</ul>
+						</div>
+
+						<!-- Right Ad Container -->
+						<div class="ad-container sidebar-ad">
+							<div
+								class="ad-with-link d-flex justify-content-center align-items-center h-100"
+							>
+								<a
+									href="http://www.amazon.pl/wyprobujprime?tag=lukq1984-21"
+									class="d-block w-100"
+								>
+									<img
+										src="./amazon.svg"
+										alt="Reklama"
+										id="adImage"
+										class="img-fluid mx-auto d-block"
+										style="max-width: 100%; height: auto"
+									/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Cookie Consent Banner -->
+		<div id="cookieConsent" class="cookie-consent" style="display: none">
+			<div class="cookie-text">
+				<p>
+					Ta strona używa plików cookie, aby zapewnić najlepszą jakość
+					korzystania z naszej witryny. Dowiedz się więcej o plikach cookie i
+					ochronie danych osobowych.
+				</p>
+			</div>
+			<div class="cookie-buttons">
+				<button id="cookieAccept" class="cookie-btn cookie-accept">
+					Akceptuję
+				</button>
+				<button id="cookieDecline" class="cookie-btn cookie-decline">
+					Odrzuć
+				</button>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
