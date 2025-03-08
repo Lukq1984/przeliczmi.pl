@@ -17,6 +17,7 @@ body {
 
 /* Make the converter cards more compact and ensure consistent border radius */
 .converter-card {
+	border: 1px solid rgba(0, 0, 0, 0.05);
 	border-radius: 10px;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 	margin-bottom: 0.75rem; /* Reduced from 1.25rem */
