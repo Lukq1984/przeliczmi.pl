@@ -101,6 +101,44 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+// Privacy Policy Modal functionality
+document.addEventListener("DOMContentLoaded", function () {
+	const modal = document.getElementById("privacyPolicyModal");
+	const link = document.getElementById("privacyPolicyLink");
+	const closeButton = document.querySelector(".close-button");
+
+	// Open modal when clicking the link
+	link.addEventListener("click", function (e) {
+		e.preventDefault();
+		modal.style.display = "block";
+		document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+	});
+
+	// Close modal when clicking the close button
+	closeButton.addEventListener("click", function () {
+		modal.style.display = "none";
+		document.body.style.overflow = "auto"; // Re-enable scrolling
+	});
+
+	// Close modal when clicking outside of it
+	window.addEventListener("click", function (event) {
+		if (event.target === modal) {
+			modal.style.display = "none";
+			document.body.style.overflow = "auto"; // Re-enable scrolling
+		}
+	});
+
+	// Close modal when pressing Escape key
+	document.addEventListener("keydown", function (event) {
+		if (event.key === "Escape" && modal.style.display === "block") {
+			modal.style.display = "none";
+			document.body.style.overflow = "auto"; // Re-enable scrolling
+		}
+	});
+});
+
+
+
 // Conversion history functionality
 let conversionHistory = [];
 const MAX_HISTORY_ITEMS = 5;
