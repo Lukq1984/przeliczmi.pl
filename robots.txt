@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /includes/
+Disallow: /cgi-bin/
+
+# Blokowanie plików tymczasowych i skryptów
+Disallow: /*.json$
+Disallow: /*.js$
+Disallow: /*.inc$
+Disallow: /*.css$
+
+# Zezwalanie na indeksowanie plików obrazów
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.png$
+Allow: /*.svg$
+
+# Informacja o lokalizacji mapy strony
+Sitemap: https://przeliczmi.pl/sitemap.xml
+
+# Opóźnienie między zapytaniami dla robotów Google
+Crawl-delay: 10
