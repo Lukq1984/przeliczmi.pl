@@ -6,10 +6,7 @@ Disallow: /includes/
 Disallow: /cgi-bin/
 
 # Blokowanie plików tymczasowych i skryptów
-Disallow: /*.json$
-Disallow: /*.js$
 Disallow: /*.inc$
-Disallow: /*.css$
 
 # Zezwalanie na indeksowanie plików obrazów
 Allow: /*.jpg$
