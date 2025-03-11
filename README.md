@@ -1,1 +1,1 @@
-# przeliczmi.pl
+# PrzeliczMi.pl
